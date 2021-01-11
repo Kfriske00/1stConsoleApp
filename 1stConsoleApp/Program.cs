@@ -66,10 +66,7 @@ namespace _1stConsoleApp
             }
 
             Console.Read();
-            /*Console.WriteLine(s11);
-            s11.sLastName = "Biggie";```````````````
-            Console.WriteLine($"{s11} {s12}");*/
-
+            //ffffffffffffffffoooooooooooooooooooooooooooooooooooooooo
 
             /*
             var run = true;
