@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace _1stConsoleApp
 {
@@ -27,10 +28,22 @@ namespace _1stConsoleApp
         public static void ValidateFirstName(Students user)
         {
             string firstName;
+            bool isMatch;
             bool firstNameIsNotValid = true;
+
+            /*Example, matching strings to a Regex pattern
+             * Try regexr.com for practice */
+
+            string pattern = @"^([^0-9]*)$";
+            Regex rg = new Regex(pattern);
+            
+
             while (firstNameIsNotValid)
             {
-                if (string.IsNullOrWhiteSpace(firstName = Console.ReadLine()))
+                firstName = Console.ReadLine();
+                isMatch = rg.IsMatch(firstName);
+
+                if (string.IsNullOrWhiteSpace(firstName) || !isMatch)
                 {
                     Console.WriteLine("Please enter a valid First Name!");
                 }
