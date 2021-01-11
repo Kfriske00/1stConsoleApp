@@ -28,7 +28,6 @@ namespace _1stConsoleApp
         public static void ValidateFirstName(Students user)
         {
             string firstName;
-            bool isMatch;
             bool firstNameIsNotValid = true;
 
             /*Example, matching strings to a Regex pattern
@@ -41,9 +40,9 @@ namespace _1stConsoleApp
             while (firstNameIsNotValid)
             {
                 firstName = Console.ReadLine();
-                isMatch = rg.IsMatch(firstName);
+                Match match = rg.Match(firstName);
 
-                if (string.IsNullOrWhiteSpace(firstName) || !isMatch)
+                if (string.IsNullOrWhiteSpace(firstName) || !match.Success)
                 {
                     Console.WriteLine("Please enter a valid First Name!");
                 }
