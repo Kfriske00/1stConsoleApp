@@ -33,14 +33,14 @@ namespace _1stConsoleApp
             /*Example, matching strings to a Regex pattern
              * Try regexr.com for practice */
 
-            string pattern = @"^([^0-9]*)$";
-            Regex rg = new Regex(pattern);
+            string regexPattern = @"^([^0-9]*)$";
+            Regex regex = new Regex(regexPattern);
             
 
             while (firstNameIsNotValid)
             {
                 firstName = Console.ReadLine();
-                Match match = rg.Match(firstName);
+                Match match = regex.Match(firstName);
 
                 if (string.IsNullOrWhiteSpace(firstName) || !match.Success)
                 {
@@ -59,9 +59,16 @@ namespace _1stConsoleApp
         {
             string lastName;
             bool lastNameIsNotValid = true;
+
+            string regexPattern = @"^([^0-9]*)$";
+            Regex regex = new Regex(regexPattern);
+
             while (lastNameIsNotValid)
             {
-                if (string.IsNullOrWhiteSpace(lastName = Console.ReadLine()))
+                lastName = Console.ReadLine();
+                Match match = regex.Match(lastName);
+
+                if (string.IsNullOrWhiteSpace(lastName) || !match.Success)
                 {
                     Console.WriteLine("Please enter a valid Last Name!");
                 }

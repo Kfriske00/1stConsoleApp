@@ -9,7 +9,7 @@ namespace _1stConsoleApp
       
         public static Students CreateStudent()
         {
-            Students user = new Students();
+            Students user = new Students("2", "2", 2);
 
             Console.WriteLine("Please enter in the First Name:");
             ValidStudent.ValidateFirstName(user);
