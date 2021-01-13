@@ -20,6 +20,8 @@ namespace _1stConsoleApp
             Messages.StartMessage();
 
             Students students = GetStudentInfo.CreateStudent();
+
+
             /*
             bool isNamesValid = ValidStudent.ValidNames(students);
             //bool isAgeValid = ValidStudent.ValidAge(students);
