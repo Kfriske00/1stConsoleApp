@@ -8,23 +8,14 @@ namespace _1stConsoleApp
 
     public class Students
     {
-
         public string firstName { get; set; }
         public string lastName;
-
-        public override string ToString()
-        {
-            return $"Student: {firstName} {lastName}\nAge: {age}\nStudent ID: {studentID}\n"; 
-        }
         public int age { get; set; }
         public int studentID { get; private set; }
         Random sid = new Random();
-
-
-
-        public Students()
+        public override string ToString()
         {
-            studentID = sid.Next(1, 10000);
+            return $"Student: {firstName} {lastName}\nAge: {age}\nStudent ID: {studentID}\n"; 
         }
         public string sLastName
         {
@@ -39,11 +30,12 @@ namespace _1stConsoleApp
             }
 
         }
-        public Students(string Firstname, string Lastname, int Age) : this()
+        public Students(string Firstname, string Lastname, int Age)
         {
             firstName = Firstname;
             lastName = Lastname;
             age = Age;
+            studentID = sid.Next(1, 10000);
         }
 
         public void AddToRoster(Roster roster)
