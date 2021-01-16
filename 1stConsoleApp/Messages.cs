@@ -16,7 +16,7 @@ namespace _1stConsoleApp
             indexNum = 0;
         }*/
 
-        
+
         public static void StartMessage()
         {
             Console.WriteLine("Hello! Welcome to my first Console Program! To get started lets create a student!");
@@ -28,6 +28,10 @@ namespace _1stConsoleApp
             Console.WriteLine("Thank you for trying out my Application!");
         }
 
+        public static void ChoiceOptions()
+        {
+
+        }
 
     }
 }

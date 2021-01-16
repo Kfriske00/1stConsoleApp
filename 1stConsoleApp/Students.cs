@@ -36,6 +36,7 @@ namespace _1stConsoleApp
             lastName = Lastname;
             age = Age;
             studentID = sid.Next(1, 10000);
+
         }
 
         public void AddToRoster(Roster roster)

@@ -15,19 +15,6 @@ namespace _1stConsoleApp
 
             Students students = GetStudentInfo.CreateStudent();
 
-
-            /*
-            bool isNamesValid = ValidStudent.ValidNames(students);
-            //bool isAgeValid = ValidStudent.ValidAge(students);
-            
-            if(isNamesValid == false)
-            {
-                Messages.EndApp();
-            }
-            */
-            
-            
-            //var s1 = new Students(menus.fName, menus.lName, aAge); 
             Console.WriteLine("Student created! Would you like to add the new student to the Student Roster?\n(Y)es or (N)o");
             bool run = true;
             while (run)
