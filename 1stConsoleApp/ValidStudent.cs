@@ -54,7 +54,6 @@ namespace _1stConsoleApp
             }
 
         }
-
         public static void ValidateLastName(Students user)
         {
             string lastName;
