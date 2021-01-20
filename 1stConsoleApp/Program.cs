@@ -13,7 +13,8 @@ namespace _1stConsoleApp
 
             Messages.StartMessage();
 
-            Students students = GetStudentInfo.CreateStudent();
+            Student students = GetStudentInfo.CreateStudent();
+            students.AddToRoster(studentList);
 
             Console.WriteLine("Student created! Would you like to add the new student to the Student Roster?\n(Y)es or (N)o");
             bool run = true;
@@ -46,9 +47,9 @@ namespace _1stConsoleApp
                     run = false;
                 }
             }
-            var s11 = new Students("Karla", "Jackle", 35);
-            var s12 = new Students("Jimmy", "Biggie", 112);
-            new Students("J", "C", 900);
+            var s11 = new Student("Karla", "Jackle", 35);
+            var s12 = new Student("Jimmy", "Biggie", 112);
+            new Student("J", "C", 900);
             foreach (var student in studentList.StudentRoster)
             {
                 student.PrintStudent();
@@ -59,7 +60,7 @@ namespace _1stConsoleApp
 
             /*
             var run = true;
-            Console.WriteLine("Welcome to Lil'PPs Fake School System! Please enter one of the following:\n 1.) Add Students to Roster\n 2.) Change a students last name\n 3.) Search a student by last name\n 4.) Nothing\n 5.)Exit");
+            Console.WriteLine("Welcome to Lil'PPs Fake School System! Please enter one of the following:\n 1.) Add Student to Roster\n 2.) Change a students last name\n 3.) Search a student by last name\n 4.) Nothing\n 5.)Exit");
             while (run)
             {
                 
@@ -84,8 +85,8 @@ namespace _1stConsoleApp
 
                         break;
                     case ConsoleKey.D2:
-                        s11.sLastName = Console.ReadLine();
-                        Console.WriteLine(s11.sLastName);
+                        s11.LastName = Console.ReadLine();
+                        Console.WriteLine(s11.LastName);
                         break;
 
                     case ConsoleKey.D3:
@@ -93,7 +94,7 @@ namespace _1stConsoleApp
                         var ssLastName = Console.ReadLine();
                         foreach (var student in studentList.StudentRoster)
                         {
-                            if (student.sLastName.Contains(ssLastName))
+                            if (student.LastName.Contains(ssLastName))
                             {
                                 student.PrintStudent();
                             }

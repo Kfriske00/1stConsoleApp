@@ -30,7 +30,7 @@ namespace _1stConsoleApp
 
         public static void ChoiceOptions()
         {
-
+            
         }
 
     }

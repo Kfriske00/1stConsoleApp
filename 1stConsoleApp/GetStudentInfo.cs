@@ -7,17 +7,17 @@ namespace _1stConsoleApp
     public class GetStudentInfo
     { 
       
-        public static Students CreateStudent()
+        public static Student CreateStudent()
         {
-            Students user = new Students();
 
             Console.WriteLine("Please enter in the First Name:");
-            ValidStudent.ValidateFirstName(user);
+            string firstName = ValidStudent.GetValidName();
             Console.WriteLine("Please enter in the Last Name:");
-            ValidStudent.ValidateLastName(user);
+            string lastName = ValidStudent.GetValidName();
             Console.WriteLine("Please enter the Age:");
-            ValidStudent.ValidateAge(user);
-            return user;
+            int age = ValidStudent.ValidateAge();
+            return new Student(firstName, lastName, age);
+            
         }
     }
 }

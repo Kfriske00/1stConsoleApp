@@ -6,10 +6,10 @@ using System.Text;
 namespace _1stConsoleApp
 {
 
-    public class Students
+    public class Student
     {
         public string firstName { get; set; }
-        public string lastName;
+        private string lastName;
         public int age { get; set; }
         public int studentID { get; private set; }
         Random sid = new Random();
@@ -17,7 +17,7 @@ namespace _1stConsoleApp
         {
             return $"Student: {firstName} {lastName}\nAge: {age}\nStudent ID: {studentID}\n"; 
         }
-        public string sLastName
+        public string LastName
         {
             get
             {
@@ -30,13 +30,13 @@ namespace _1stConsoleApp
             }
 
         }
-        public Students(string Firstname, string Lastname, int Age)
+        public Student(string Firstname, string Lastname, int Age)
         {
             firstName = Firstname;
             lastName = Lastname;
             age = Age;
             studentID = sid.Next(1, 10000);
-
+            
         }
 
         public void AddToRoster(Roster roster)
@@ -58,7 +58,7 @@ namespace _1stConsoleApp
         }
         */
         /*
-        public List<Students> GetList
+        public List<Student> GetList
         {    
             
 
