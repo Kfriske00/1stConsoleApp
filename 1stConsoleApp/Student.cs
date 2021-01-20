@@ -39,10 +39,10 @@ namespace _1stConsoleApp
             
         }
 
-        public void AddToRoster(Roster roster)
+        /*public void AddToRoster(Roster roster)
         {
             roster.StudentRoster.Add(this);
-        }
+        }*/
         public void PrintStudent()
         {
             Console.WriteLine(this.ToString());

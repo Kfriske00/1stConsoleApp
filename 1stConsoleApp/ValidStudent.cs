@@ -35,9 +35,8 @@ namespace _1stConsoleApp
 
             string regexPattern = @"^([^0-9]*)$";
             Regex regex = new Regex(regexPattern);
-            
 
-            while (firstNameIsNotValid)
+            do
             {
                 firstName = Console.ReadLine();
                 Match match = regex.Match(firstName);
@@ -48,11 +47,12 @@ namespace _1stConsoleApp
                 }
                 else
                 {
-                    
+
                     firstNameIsNotValid = false;
-                   
+
                 }
             }
+            while (firstNameIsNotValid);
              return firstName;
         }
        /* public static void ValidateLastName(Student user)
