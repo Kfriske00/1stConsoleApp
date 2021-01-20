@@ -7,9 +7,9 @@ namespace _1stConsoleApp
 {
     public class ValidStudent
     {
-        public static void ValidateAge(Students user)
+        public static int ValidateAge()
         {
-            int age;
+            int age = 0;
             bool ageIsNotValid = true;
             while (ageIsNotValid)
             {
@@ -20,14 +20,14 @@ namespace _1stConsoleApp
                 }
                 else
                 {
-                    user.age = age;
                     ageIsNotValid = false;
                 }
             }
+                    return age;
         }
-        public static void ValidateFirstName(Students user)
+        public static string GetValidName()
         {
-            string firstName;
+            string firstName = "";
             bool firstNameIsNotValid = true;
 
             /*Example, matching strings to a Regex pattern
@@ -48,13 +48,14 @@ namespace _1stConsoleApp
                 }
                 else
                 {
-                    user.firstName = firstName;
+                    
                     firstNameIsNotValid = false;
+                   
                 }
             }
-
+             return firstName;
         }
-        public static void ValidateLastName(Students user)
+       /* public static void ValidateLastName(Student user)
         {
             string lastName;
             bool lastNameIsNotValid = true;
@@ -77,6 +78,6 @@ namespace _1stConsoleApp
                     lastNameIsNotValid = false;
                 }
             }
-        }
+        }*/
     }
 }

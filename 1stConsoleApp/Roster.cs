@@ -6,7 +6,7 @@ namespace _1stConsoleApp
 {
     public class Roster
     {
-        public List<Students> StudentRoster { get; set; } = new List<Students>();
+        public List<Student> StudentRoster { get; set; } = new List<Student>();
 
     }
 }
