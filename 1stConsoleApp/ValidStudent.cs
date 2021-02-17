@@ -27,7 +27,7 @@ namespace _1stConsoleApp
         }
         public static string GetValidName()
         {
-            string firstName = "";
+            string name = "";
             bool firstNameIsNotValid = true;
 
             /*Example, matching strings to a Regex pattern
@@ -38,10 +38,11 @@ namespace _1stConsoleApp
 
             do
             {
-                firstName = Console.ReadLine();
-                Match match = regex.Match(firstName);
+                name = UserInput.GetName(name);
+                //firstName = Console.ReadLine();
+                Match match = regex.Match(name);
 
-                if (string.IsNullOrWhiteSpace(firstName) || !match.Success)
+                if (string.IsNullOrWhiteSpace(name) || !match.Success)
                 {
                     Console.WriteLine("Please enter a valid First Name!");
                 }
@@ -53,7 +54,7 @@ namespace _1stConsoleApp
                 }
             }
             while (firstNameIsNotValid);
-             return firstName;
+             return name;
         }
        /* public static void ValidateLastName(Student user)
         {

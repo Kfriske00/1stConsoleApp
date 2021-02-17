@@ -8,7 +8,7 @@ namespace _1stConsoleApp
     {
         static void Main(string[] args)
         {
-            ConsoleKey keyInput;
+            ConsoleKey keyInput = ConsoleKey.A;
             Roster studentList = new Roster("Students");
             Roster CS115 = new Roster("CS115");
 
@@ -21,10 +21,11 @@ namespace _1stConsoleApp
             //students.AddToRoster(studentList);
 
             bool run = true;
+            Console.WriteLine("Student created! Would you like to add a new student to the Student Roster?\n(Y)es or (N)o");
             do
             {
-                Console.WriteLine("Student created! Would you like to add a new student to the Student Roster?\n(Y)es or (N)o");
-                keyInput = Console.ReadKey(true).Key;
+
+                keyInput = UserInput.GetUserSelection(keyInput);
                 if ( keyInput == ConsoleKey.Y)
                 {
                     studentList.AddStudent(GetStudentInfo.CreateStudent());
@@ -33,10 +34,6 @@ namespace _1stConsoleApp
                 else if (keyInput == ConsoleKey.N)
                 {
                     run = false;
-                }
-                else
-                {
-                    Console.WriteLine("What the fuck");
                 }
             }
             while (run);
