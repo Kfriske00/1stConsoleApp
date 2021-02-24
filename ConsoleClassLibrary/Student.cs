@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 
-namespace _1stConsoleApp
+namespace ConsoleClassLibrary
 {
 
     public class Student
@@ -15,7 +15,7 @@ namespace _1stConsoleApp
         Random sid = new Random();
         public override string ToString()
         {
-            return $"Student: {firstName} {lastName}\nAge: {age}\nStudent ID: {studentID}\n"; 
+            return $"Student: {firstName} {lastName}\nAge: {age}\nStudent ID: {studentID}\n";
         }
         public string LastName
         {
@@ -36,7 +36,7 @@ namespace _1stConsoleApp
             lastName = Lastname;
             age = Age;
             studentID = sid.Next(1, 10000);
-            
+
         }
 
         /*public void AddToRoster(Roster roster)
@@ -45,7 +45,7 @@ namespace _1stConsoleApp
         }*/
         public void PrintStudent()
         {
-            Console.WriteLine(this.ToString());
+            Console.WriteLine(ToString());
         }
 
         /*

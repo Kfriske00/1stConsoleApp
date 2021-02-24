@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace _1stConsoleApp
+namespace ConsoleClassLibrary
 {
     public class ValidStudent
     {

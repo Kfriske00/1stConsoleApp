@@ -1,8 +1,9 @@
-﻿using System;
+﻿using ConsoleClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace _1stConsoleApp
+namespace ConsoleClassLibrary
 {
     public class GetStudentInfo
     { 

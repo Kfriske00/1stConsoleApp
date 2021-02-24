@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -19,9 +20,9 @@ namespace _1stConsoleApp
             studentList.PrintRoster();
             CS115.PrintRoster();
             //students.AddToRoster(studentList);
-
-            bool run = true;
-            Console.WriteLine("Student created! Would you like to add a new student to the Student Roster?\n(Y)es or (N)o");
+            Messages.AddToListChoice();
+            //UserInput.AddToRosterChoice();
+            bool makeSelection = true;
             do
             {
 
@@ -29,14 +30,14 @@ namespace _1stConsoleApp
                 if ( keyInput == ConsoleKey.Y)
                 {
                     studentList.AddStudent(GetStudentInfo.CreateStudent());
-                    run = true;
+                    makeSelection = true;
                 }
                 else if (keyInput == ConsoleKey.N)
                 {
-                    run = false;
+                    makeSelection = false;
                 }
             }
-            while (run);
+            while (makeSelection);
             
             Console.WriteLine("Do you want to display the Roster?\n(Y)es or (N)o");
             keyInput = Console.ReadKey(true).Key;
