@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _1stConsoleApp
+namespace ConsoleClassLibrary
 {
     public class Messages
     {
@@ -28,9 +28,9 @@ namespace _1stConsoleApp
             Console.WriteLine("Thank you for trying out my Application!");
         }
 
-        public static void ChoiceOptions()
+        public static void AddToListChoice()
         {
-            
+            Console.WriteLine("Student created! Would you like to add a new student to the Student Roster?\n(Y)es or (N)o");
         }
 
     }

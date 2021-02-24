@@ -6,4 +6,8 @@
     <RootNamespace>_1stConsoleApp</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ConsoleClassLibrary\ConsoleClassLibrary.csproj" />
+  </ItemGroup>
+
 </Project>
