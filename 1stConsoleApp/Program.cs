@@ -19,8 +19,8 @@ namespace _1stConsoleApp
 
             studentList.AddStudent((Student)student);
             studentList.AddStudent((Student)teacher);
+            Console.WriteLine();
             studentList.ToString();
-
             studentList.PrintRoster();
 
 
