@@ -17,7 +17,6 @@ namespace ConsoleClassLibrary
             _regex = regex;
         }
 
-
         public static int ValidateAge()
         {
             Console.WriteLine("Please enter an Age.");
@@ -37,9 +36,10 @@ namespace ConsoleClassLibrary
             }
             return age;
         }
+
         public static string GetValidName()
         {
-            //return "Hello";
+
             string name = "";
             bool firstNameIsNotValid = true;
 
@@ -59,14 +59,12 @@ namespace ConsoleClassLibrary
             //Example, matching strings to a Regex pattern
             // Try regexr.com for practice 
             
-            
             //_regex.regexPatterns = @"^([^0-9]*)$";
 
             do
             {
                 Regex regexPattern = new Regex(@"^([^0-9]*)$");
                 name = UserInput.GetName(name);
-                //firstName = Console.ReadLine();
                 Match match = regexPattern.Match(name);
 
                 if (string.IsNullOrWhiteSpace(name) || !match.Success)
@@ -81,29 +79,6 @@ namespace ConsoleClassLibrary
             while (firstNameIsNotValid);
             return name;
         }
-        /* public static void ValidateLastName(Student user)
-         {
-             string lastName;
-             bool lastNameIsNotValid = true;
 
-             string regexPattern = @"^([^0-9]*)$";
-             Regex regex = new Regex(regexPattern);
-
-             while (lastNameIsNotValid)
-             {
-                 lastName = Console.ReadLine();
-                 Match match = regex.Match(lastName);
-
-                 if (string.IsNullOrWhiteSpace(lastName) || !match.Success)
-                 {
-                     Console.WriteLine("Please enter a valid Last Name!");
-                 }
-                 else
-                 {
-                     user.lastName = lastName;
-                     lastNameIsNotValid = false;
-                 }
-             }
-         }*/
     }
 }

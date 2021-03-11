@@ -10,8 +10,6 @@ namespace ConsoleClassLibrary
         public string rosterName;
         public List<Student> personRoster { get; set; } = new List<Student>();
 
-       // public Roster() { }
-
         public Roster(string name)
         {
             rosterName = name;
@@ -37,8 +35,6 @@ namespace ConsoleClassLibrary
             }
 
         }
-
-
 
     }
 }

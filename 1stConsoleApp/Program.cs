@@ -23,64 +23,54 @@ namespace _1stConsoleApp
 
             studentList.PrintRoster();
 
-            //GetPersonInfo.CreateStudent(student);
 
-            //ConsoleKey keyInput = ConsoleKey.A;
-            //Roster studentList = new Roster("Students");
-            //Roster CS115 = new Roster("CS115");
-
-            
+            #region Adding and displaying Rosters
             /*
-            studentList.AddStudent(GetPersonInfo.CreateStudent());
-            studentList.PrintRoster();
-            CS115.PrintRoster();
-            //students.AddToRoster(studentList);
-            Messages.AddToListChoice();
-            //UserInput.AddToRosterChoice();
-            bool makeSelection = true;
-            do
-            {
+			bool makeSelection = true;
+			do
+			{
 
-                keyInput = UserInput.GetUserSelection(keyInput);
-                if ( keyInput == ConsoleKey.Y)
-                {
-                    studentList.AddStudent(GetPersonInfo.CreateStudent());
-                    makeSelection = true;
-                }
-                else if (keyInput == ConsoleKey.N)
-                {
-                    makeSelection = false;
-                }
-            }
-            while (makeSelection);
-            
-            Console.WriteLine("Do you want to display the Roster?\n(Y)es or (N)o");
-            keyInput = Console.ReadKey(true).Key;
+				keyInput = UserInput.GetUserSelection(keyInput);
+				if ( keyInput == ConsoleKey.Y)
+				{
+					studentList.AddStudent(GetPersonInfo.CreateStudent());
+					makeSelection = true;
+				}
+				else if (keyInput == ConsoleKey.N)
+				{
+					makeSelection = false;
+				}
+			}
+			while (makeSelection);
+			
+			Console.WriteLine("Do you want to display the Roster?\n(Y)es or (N)o");
+			keyInput = Console.ReadKey(true).Key;
 
-            if (keyInput == ConsoleKey.Y)
-                {
-                    studentList.PrintRoster();
-                }
-            */                /*
-             var s11 = new Student("Karla", "Jackle", 35);
-            var s12 = new Student("Jimmy", "Biggie", 112);
-            new Student("J", "C", 900);
-            foreach (var student in studentList.StudentRoster)
-            {
-                student.PrintStudent();
-            }
-            */
+			if (keyInput == ConsoleKey.Y)
+				{
+					studentList.PrintRoster();
+				}
+			
+			 var s11 = new Student("Karla", "Jackle", 35);
+			var s12 = new Student("Jimmy", "Biggie", 112);
+			new Student("J", "C", 900);
+			foreach (var student in studentList.StudentRoster)
+			{
+				student.PrintStudent();
+			}
+			*/
+            #endregion
+
             Console.Read();
-            //ffffffffffffffffoooooooooooooooooooooooooooooooooooooooo
 
+            #region Testing Whole Application
             /*
             var run = true;
-            Console.WriteLine("Welcome to Lil'PPs Fake School System! Please enter one of the following:\n 1.) Add Student to Roster\n 2.) Change a students last name\n 3.) Search a student by last name\n 4.) Nothing\n 5.)Exit");
+            Console.WriteLine("Welcome to My Fake School System! Please enter one of the following:\n 1.) Add Student to Roster\n 2.) Change a students last name\n 3.) Search a student by last name\n 4.) Nothing\n 5.)Exit");
             while (run)```
             {
                 
-                //var option = Console.ReadKey().Key;
-                
+                var option = Console.ReadKey().Key;
 
                 switch(Console.ReadKey(false).Key)
                 {
@@ -129,13 +119,10 @@ namespace _1stConsoleApp
                     case ConsoleKey.D5:
                         run = false;
                         break;
-            
-
                 }
-            
             }
             */
-            
+            #endregion
 
         }
     }

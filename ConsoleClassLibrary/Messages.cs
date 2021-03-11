@@ -6,17 +6,6 @@ namespace ConsoleClassLibrary
 {
     public class Messages
     {
-        /*string title;
-        string[] options;
-        int indexNum;
-        public Menus(string Title, string[] Options)
-        {
-            title = Title;
-            options = Options;
-            indexNum = 0;
-        }*/
-
-
         public static void StartMessage()
         {
             Console.WriteLine("Hello! Welcome to my first Console Program! To get started lets create a student!");
