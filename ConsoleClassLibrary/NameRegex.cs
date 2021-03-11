@@ -4,10 +4,10 @@ using System.Text;
 
 namespace ConsoleClassLibrary
 {
-    public class NameRegex //: IRegex
+    public class NameRegex
     {
-        public string regexPatterns; //= @"^([^0-9]*)$";
+        public string regexPatterns;
 
-        string regexPattern { get; set; }
+        //string regexPattern { get; set; }
     }
 }

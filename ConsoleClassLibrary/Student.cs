@@ -38,42 +38,11 @@ namespace ConsoleClassLibrary
             idNumber = idNum.Next(1, 10000);
 
         }
-
-        /*public void AddToRoster(Roster roster)
-        {
-            roster.StudentRoster.Add(this);
-        }*/
         public void PrintStudent()
         {
             Console.WriteLine(ToString());
         }
 
-        /*
-        public void WriteToConsole()
-        {
-            foreach (object o in lstStudents)
-            {
-                Console.WriteLine(o.);
-            }
-        }
-        */
-        /*
-        public List<Student> GetList
-        {    
-            
-
-            get { return lstStudents; }
-        }
-        */
-
-        /*
-        public void aList()
-        {
-            foreach (var student in lstStudents)
-            {
-                Console.WriteLine($"{lstStudents[1]}");
-            }
-        }*/
     }
 }
 

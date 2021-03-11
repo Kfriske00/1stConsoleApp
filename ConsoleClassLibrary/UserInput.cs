@@ -20,6 +20,8 @@ namespace ConsoleClassLibrary
             return input;
         }
 
+        #region Adding student to Roster
+        /*
         public static void AddToRosterChoice(Student student)
         {
             ConsoleKey selectionChoice = ConsoleKey.A;
@@ -29,7 +31,6 @@ namespace ConsoleClassLibrary
                 selectionChoice = GetUserSelection(selectionChoice);
                 if (selectionChoice == ConsoleKey.Y)
                 {
-                    //studentList.AddStudent(student);
                     makeSelection = true;
                 }
                 else if (selectionChoice == ConsoleKey.N)
@@ -39,5 +40,7 @@ namespace ConsoleClassLibrary
             }
             while (makeSelection);
         }
+        */
+        #endregion
     }
 }
