@@ -9,14 +9,29 @@ namespace _1stConsoleApp
     {
         static void Main(string[] args)
         {
-            ConsoleKey keyInput = ConsoleKey.A;
-            Roster studentList = new Roster("Students");
-            Roster CS115 = new Roster("CS115");
 
             Messages.StartMessage();
+
+            IRoster studentList = SchoolLogic.CreateRoster("CS114");
+
+            IPerson student = SchoolLogic.CreateStudent(ValidStudent.GetValidName(), ValidStudent.GetValidName(), ValidStudent.ValidateAge());
+            IPerson teacher = SchoolLogic.CreateStudent("Nikra", "Kablue", 32);
+
+            studentList.AddStudent((Student)student);
+            studentList.AddStudent((Student)teacher);
+            studentList.ToString();
+
+            studentList.PrintRoster();
+
+            //GetPersonInfo.CreateStudent(student);
+
+            //ConsoleKey keyInput = ConsoleKey.A;
+            //Roster studentList = new Roster("Students");
+            //Roster CS115 = new Roster("CS115");
+
             
-            
-            studentList.AddStudent(GetStudentInfo.CreateStudent());
+            /*
+            studentList.AddStudent(GetPersonInfo.CreateStudent());
             studentList.PrintRoster();
             CS115.PrintRoster();
             //students.AddToRoster(studentList);
@@ -29,7 +44,7 @@ namespace _1stConsoleApp
                 keyInput = UserInput.GetUserSelection(keyInput);
                 if ( keyInput == ConsoleKey.Y)
                 {
-                    studentList.AddStudent(GetStudentInfo.CreateStudent());
+                    studentList.AddStudent(GetPersonInfo.CreateStudent());
                     makeSelection = true;
                 }
                 else if (keyInput == ConsoleKey.N)
@@ -46,7 +61,7 @@ namespace _1stConsoleApp
                 {
                     studentList.PrintRoster();
                 }
-                            /*
+            */                /*
              var s11 = new Student("Karla", "Jackle", 35);
             var s12 = new Student("Jimmy", "Biggie", 112);
             new Student("J", "C", 900);

@@ -6,16 +6,16 @@ using System.Text;
 namespace ConsoleClassLibrary
 {
 
-    public class Student
+    public class Student : IPerson
     {
         public string firstName { get; set; }
         private string lastName;
         public int age { get; set; }
-        public int studentID { get; private set; }
-        Random sid = new Random();
+        public int idNumber { get; private set; }
+        Random idNum = new Random();
         public override string ToString()
         {
-            return $"Student: {firstName} {lastName}\nAge: {age}\nStudent ID: {studentID}\n";
+            return $"Student: {firstName} {lastName}\nAge: {age}\nStudent ID: {idNumber}\n";
         }
         public string LastName
         {
@@ -35,7 +35,7 @@ namespace ConsoleClassLibrary
             firstName = Firstname;
             lastName = Lastname;
             age = Age;
-            studentID = sid.Next(1, 10000);
+            idNumber = idNum.Next(1, 10000);
 
         }
 

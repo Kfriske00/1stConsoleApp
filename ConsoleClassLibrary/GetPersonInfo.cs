@@ -5,10 +5,10 @@ using System.Text;
 
 namespace ConsoleClassLibrary
 {
-    public class GetStudentInfo
-    { 
-      
-        public static Student CreateStudent()
+    public class GetPersonInfo : IGetPersonInfo
+    {
+
+        public IPerson CreateStudent(Student student)
         {
 
             Console.WriteLine("Please enter in the First Name:");
@@ -18,7 +18,7 @@ namespace ConsoleClassLibrary
             Console.WriteLine("Please enter the Age:");
             int age = ValidStudent.ValidateAge();
             return new Student(firstName, lastName, age);
-            
+
         }
     }
 }
