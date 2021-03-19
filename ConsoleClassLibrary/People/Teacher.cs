@@ -4,16 +4,17 @@ using System.Text;
 
 namespace ConsoleClassLibrary
 {
-    public class Teacher : IPerson
+    public class Teacher : Person, IPerson
     {
-        public int age { get; set; }
-        public string firstName { get; set; }
+        Random idNum = new Random();
 
-        public int idNumber { get; }
+        public Teacher(string Firstname, string Lastname, int Age)
+        {
+            firstName = Firstname;
+            lastName = Lastname;
+            age = Age;
+            idNumber = idNum.Next(1, 10000);
+        }
 
-        public string LastName { get; set; }
-
-
-        
     }
 }
