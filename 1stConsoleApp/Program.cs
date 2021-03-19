@@ -2,23 +2,22 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
 namespace _1stConsoleApp
 {   
     class Program
     {
         static void Main(string[] args)
         {
-
+            
             Messages.StartMessage();
 
             IRoster studentList = SchoolLogic.CreateRoster("CS114");
 
             IPerson student = SchoolLogic.CreateStudent(ValidStudent.GetValidName(), ValidStudent.GetValidName(), ValidStudent.ValidateAge());
-            IPerson teacher = SchoolLogic.CreateStudent("Nikra", "Kablue", 32);
+            IPerson teacher = SchoolLogic.CreateStudent(ValidStudent.GetValidName(), ValidStudent.GetValidName(), ValidStudent.ValidateAge());
 
-            studentList.AddStudent((Student)student);
-            studentList.AddStudent((Student)teacher);
+            studentList.AddPerson(student);
+            studentList.AddPerson(teacher);
             Console.WriteLine();
             studentList.ToString();
             studentList.PrintRoster();

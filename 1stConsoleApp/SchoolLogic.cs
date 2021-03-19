@@ -12,9 +12,9 @@ namespace _1stConsoleApp
             return new Student(Firstname, Lastname, Age);
         }
 
-        public static IPerson CreateTeacher()
+        public static IPerson CreateTeacher(string Firstname, string Lastname, int Age)
         {
-            return new Teacher();
+            return new Teacher(Firstname, Lastname, Age);
         }
 
         public static IRoster CreateRoster(string rosterName)
@@ -22,10 +22,10 @@ namespace _1stConsoleApp
             return new Roster(rosterName);
         }
 
-        public static ValidStudent ValidateInfo()
+        /*public static ValidStudent ValidateInfo()
         {
-            return new ValidStudent(CreateTeacher(), GetNameRegex());
-        }
+            return new ValidStudent(CreateStudent(), GetNameRegex());
+        }*/
 
         public static IGetPersonInfo GetPersonInfo ()
         {
