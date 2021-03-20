@@ -36,5 +36,10 @@ namespace _1stConsoleApp
         {
             return new NameRegex();
         }
+
+        public static Messages CreateMessages()
+        { 
+            return new Messages();
+        }
     }
 }
