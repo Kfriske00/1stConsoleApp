@@ -8,16 +8,21 @@ namespace _1stConsoleApp
     {
         static void Main(string[] args)
         {
-            
+            var testRoster = new Roster("test");
+            var messages = SchoolLogic.CreateMessages();
             Messages.StartMessage();
 
             IRoster studentList = SchoolLogic.CreateRoster("CS114");
 
+            testRoster.FullRoster += messages.OnFullRoster;
+
             IPerson student = SchoolLogic.CreateStudent(ValidStudent.GetValidName(), ValidStudent.GetValidName(), ValidStudent.ValidateAge());
             IPerson teacher = SchoolLogic.CreateStudent(ValidStudent.GetValidName(), ValidStudent.GetValidName(), ValidStudent.ValidateAge());
+            IPerson person = SchoolLogic.CreateStudent("Just", "Testing", 13);
 
-            studentList.AddPerson(student);
-            studentList.AddPerson(teacher);
+            testRoster.AddPerson(person);
+            testRoster.AddPerson(student);
+            testRoster.AddPerson(teacher);
             Console.WriteLine();
             studentList.ToString();
             studentList.PrintRoster();
